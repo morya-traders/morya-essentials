@@ -164,4 +164,193 @@ if(!localStorage.getItem("siteLang")){
 </script>
 
 </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Morya Essentials | Pure by Faith</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI, sans-serif;
+  background:#f7f7f7;
+  color:#222;
+}
+
+/* HEADER */
+header{
+  background:#0f2027;
+  color:#fff;
+  padding:16px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand{
+  font-size:22px;
+  font-weight:700;
+}
+
+.menu-btn{
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* MENU */
+nav{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:260px;
+  height:100%;
+  background:#111;
+  color:#fff;
+  padding:30px 20px;
+  transition:0.4s ease;
+}
+
+nav a{
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  margin:18px 0;
+  font-size:16px;
+}
+
+nav a:hover{
+  opacity:0.7;
+}
+
+.close{
+  font-size:24px;
+  text-align:right;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  padding:70px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#203a43,#2c5364);
+  color:#fff;
+}
+
+.hero h1{
+  font-size:32px;
+  margin-bottom:12px;
+}
+
+.hero p{
+  font-size:16px;
+  opacity:0.9;
+}
+
+/* SECTION */
+.section{
+  padding:50px 20px;
+  max-width:900px;
+  margin:auto;
+}
+
+.section h2{
+  font-size:26px;
+  margin-bottom:15px;
+}
+
+.section p{
+  font-size:16px;
+  line-height:1.6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand" id="brandName">Morya Essentials</div>
+  <div class="menu-btn" onclick="openMenu()">☰</div>
+</header>
+
+<nav id="menu">
+  <div class="close" onclick="closeMenu()">✕</div>
+  <a href="index.html" id="menuHome"></a>
+  <a href="products.html" id="menuProducts"></a>
+  <a href="essence.html" id="menuEssence"></a>
+  <a href="trust.html" id="menuTrust"></a>
+  <a href="contact.html" id="menuContact"></a>
+</nav>
+
+<div class="hero">
+  <h1 id="heroTitle"></h1>
+  <p id="heroSub"></p>
+</div>
+
+<div class="section">
+  <h2 id="aboutTitle"></h2>
+  <p id="aboutText"></p>
+</div>
+
+<script>
+/* LANGUAGE CHECK */
+if(!localStorage.getItem("siteLang")){
+  window.location.href="language.html";
+}
+
+const lang = localStorage.getItem("siteLang");
+
+/* CONTENT */
+const content = {
+  en:{
+    heroTitle:"Camphor, Refined for Pure Devotion",
+    heroSub:"Premium quality camphor crafted with purity & faith",
+    aboutTitle:"Our Essence",
+    aboutText:"Morya Essentials delivers premium camphor products with devotion, purity and trust from Kolhapur.",
+    menu:{
+      home:"Home",
+      products:"Products",
+      essence:"Our Essence",
+      trust:"Trust",
+      contact:"Contact"
+    }
+  },
+  mr:{
+    heroTitle:"शुद्ध भक्तीसाठी परिष्कृत कापूर",
+    heroSub:"पवित्रता आणि विश्वासासह तयार केलेला उत्कृष्ट कापूर",
+    aboutTitle:"आमचा सार",
+    aboutText:"मोरया एसेंशियल्स कोल्हापूर येथून शुद्धता, श्रद्धा आणि विश्वासाने कापूर उत्पादने देते.",
+    menu:{
+      home:"मुख्यपृष्ठ",
+      products:"उत्पादने",
+      essence:"आमचा सार",
+      trust:"विश्वास",
+      contact:"संपर्क"
+    }
+  }
+};
+
+/* APPLY LANGUAGE */
+document.getElementById("heroTitle").innerText = content[lang].heroTitle;
+document.getElementById("heroSub").innerText   = content[lang].heroSub;
+document.getElementById("aboutTitle").innerText = content[lang].aboutTitle;
+document.getElementById("aboutText").innerText  = content[lang].aboutText;
+
+document.getElementById("menuHome").innerText = content[lang].menu.home;
+document.getElementById("menuProducts").innerText = content[lang].menu.products;
+document.getElementById("menuEssence").innerText = content[lang].menu.essence;
+document.getElementById("menuTrust").innerText = content[lang].menu.trust;
+document.getElementById("menuContact").innerText = content[lang].menu.contact;
+
+/* MENU */
+function openMenu(){
+  document.getElementById("menu").style.right="0";
+}
+function closeMenu(){
+  document.getElementById("menu").style.right="-100%";
+}
+</script>
+
+</body>
 </html>
