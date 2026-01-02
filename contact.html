@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Morya Essentials | Contact</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI, sans-serif;
+  background:#f4f6f8;
+}
+
+header{
+  background:#0f2027;
+  color:#fff;
+  padding:16px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand{
+  font-size:22px;
+  font-weight:700;
+}
+
+.menu-btn{
+  font-size:26px;
+  cursor:pointer;
+}
+
+nav{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:260px;
+  height:100%;
+  background:#111;
+  color:#fff;
+  padding:30px 20px;
+  transition:0.4s;
+}
+
+nav a{
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  margin:18px 0;
+}
+
+.close{
+  font-size:24px;
+  text-align:right;
+  cursor:pointer;
+}
+
+/* CONTENT */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.info{
+  background:#fff;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  margin-bottom:35px;
+}
+
+.info p{
+  margin:10px 0;
+  font-size:15px;
+}
+
+/* FORM */
+form{
+  background:#fff;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+form input, form textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:14px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+form button{
+  width:100%;
+  padding:14px;
+  background:#0f2027;
+  color:#fff;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">Morya Essentials</div>
+  <div class="menu-btn" onclick="openMenu()">☰</div>
+</header>
+
+<nav id="menu">
+  <div class="close" onclick="closeMenu()">✕</div>
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="trust.html">Our Essence</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+  <h1>Contact Us</h1>
+
+  <div class="info">
+    <p><strong>Brand:</strong> Morya Essentials</p>
+    <p><strong>Location:</strong> Kolhapur, Maharashtra</p>
+    <p><strong>Email:</strong> help.moryatraders@gmail.com</p>
+    <p><strong>Support:</strong> Business & Order Enquiries</p>
+  </div>
+
+  <form action="https://formsubmit.co/help.moryatraders@gmail.com" method="POST">
+    <input type="text" name="Name" placeholder="Your Name" required>
+    <input type="email" name="Email" placeholder="Your Email" required>
+    <input type="tel" name="Mobile" placeholder="Mobile Number" required>
+    <textarea name="Message" placeholder="Your Message" required></textarea>
+
+    <input type="hidden" name="_subject" value="New Enquiry - Morya Essentials">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit">Send Enquiry</button>
+  </form>
+</div>
+
+<script>
+/* LANGUAGE CHECK */
+if(!localStorage.getItem("siteLang")){
+  window.location.href="language.html";
+}
+
+/* MENU */
+function openMenu(){
+  document.getElementById("menu").style.right="0";
+}
+function closeMenu(){
+  document.getElementById("menu").style.right="-100%";
+}
+</script>
+
+</body>
+</html>
