@@ -2,152 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Our Products | Morya Essentials</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0b0b;
-      color: #fff;
-    }
-
-    header {
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    header h1 {
-      color: #d4af37;
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 16px;
-      opacity: 0.9;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .product-card {
-      background: #141414;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-      transition: transform 0.3s ease;
-    }
-
-    .product-card:hover {
-      transform: translateY(-6px);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .product-content {
-      padding: 18px;
-      text-align: center;
-    }
-
-    .product-content h3 {
-      color: #d4af37;
-      margin-bottom: 8px;
-      font-size: 20px;
-    }
-
-    .product-content p {
-      font-size: 14px;
-      opacity: 0.9;
-      margin-bottom: 16px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 26px;
-      background: #d4af37;
-      color: #000;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-    }
-
-    .btn:hover {
-      background: #e8c85c;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 15px;
-      font-size: 13px;
-      opacity: 0.7;
-    }
-  </style>
+  <title>Products | Morya Essentials</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <header>
-    <h1>Our Products</h1>
-    <p>Pure by Faith • Premium Quality • Trusted</p>
-  </header>
+<nav>
+  <h1>Morya Essentials</h1>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+  </div>
+</nav>
 
-  <section class="products">
+<section class="products">
 
-    <div class="product-card">
-      <img src="kapoor-tablet.jpg.jpg" alt="Premium Camphor Tablets">
-      
-      <div class="product-content">
-        <h3>Premium Camphor Tablets</h3>
-        <p>High purity camphor for daily pooja and rituals.</p>
-        <a href="order.html?product=Premium Camphor Tablets" class="btn">Order Now</a>
-      </div>
-    </div>
+  <div class="card">
+    <h3>Premium Camphor Tablets</h3>
+    <p>High purity camphor tablets</p>
+    <a class="btn" href="order.html">Order</a>
+  </div>
 
-    <div class="product-card">
-      <img src="kapoor-powder.jpg.jpg" alt="Natural Camphor Powder">
-      <div class="product-content">
-        <h3>Natural Camphor Powder</h3>
-        <p>Clean burning with long lasting divine aroma.</p>
-        <a href="order.html?product=Natural Camphor Powder" class="btn">Order Now</a>
-      </div>
-    </div>
+  <div class="card">
+    <h3>Natural Camphor Powder</h3>
+    <p>Strong fragrance powder</p>
+    <a class="btn" href="order.html">Order</a>
+  </div>
 
-    <div class="product-card">
-      <img src="temple-kapoor.jpg.jpg" alt="Temple Grade Camphor">
-      <div class="product-content">
-        <h3>Temple Grade Camphor</h3>
-        <p>Specially crafted for temples & sacred rituals.</p>
-        <a href="order.html?product=Temple Grade Camphor" class="btn">Order Now</a>
-      </div>
-    </div>
+  <div class="card">
+    <h3>Bhimseni Camphor</h3>
+    <p>For pooja & havan</p>
+    <a class="btn" href="order.html">Order</a>
+  </div>
 
-    <div class="product-card">
-      <img src="morya-pure-kapoor.jpg.png" alt="Wholesale Camphor Pack">
-      <div class="product-content">
-        <h3>Wholesale Camphor Pack</h3>
-        <p>Bulk supply for traders & distributors.</p>
-        <a href="order.html?product=Wholesale Camphor Pack" class="btn">Order Now</a>
-      </div>
-    </div>
+  <div class="card">
+    <h3>Camphor Cubes</h3>
+    <p>Long burning cubes</p>
+    <a class="btn" href="order.html">Order</a>
+  </div>
 
-  </section>
+  <div class="card">
+    <h3>Camphor Cone</h3>
+    <p>Temple use premium cones</p>
+    <a class="btn" href="order.html">Order</a>
+  </div>
 
-  <footer>
-    © 2026 Morya Essentials • Kolhapur
-  </footer>
+</section>
 
 </body>
 </html>
