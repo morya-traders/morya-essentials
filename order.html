@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Place Order | Morya Essentials</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+  background:#0b0b0b;
+  color:#fff;
+  font-family:Arial, sans-serif;
+}
+.box{
+  max-width:420px;
+  margin:40px auto;
+  padding:20px;
+}
+h2{
+  text-align:center;
+  color:#d4af37;
+}
+input, textarea, button{
+  width:100%;
+  padding:12px;
+  margin-top:12px;
+  border-radius:8px;
+  border:none;
+}
+button{
+  background:#d4af37;
+  font-weight:bold;
+  font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h2>Confirm Your Order</h2>
+
+<form action="https://formsubmit.co/help.moryatraders@gmail.com" method="POST">
+
+<input type="hidden" name="_subject" value="New Order from Website">
+
+<input name="name" placeholder="Full Name" required>
+
+<input name="mobile" placeholder="Mobile Number" required>
+
+<select name="product" required>
+  <option>Premium Camphor Tablets</option>
+  <option>Natural Camphor Powder</option>
+  <option>Temple Grade Camphor</option>
+</select>
+
+<input type="number" name="quantity" placeholder="Quantity" required>
+
+<textarea name="address" placeholder="Full Address" required></textarea>
+
+<button type="submit">Place Order</button>
+
+</form>
+</div>
+
+</body>
+</html>
