@@ -1,90 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Morya Essentials | Pure by Faith</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Morya Essentials | Select Language</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      text-align: center;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    .box {
-      background: rgba(0,0,0,0.4);
-      padding: 40px 25px;
-      border-radius: 16px;
-      width: 90%;
-      max-width: 360px;
-    }
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:#fff;
+}
 
-    h1 {
-      margin: 0;
-      font-size: 28px;
-      letter-spacing: 1px;
-    }
+.container{
+  text-align:center;
+  background:rgba(255,255,255,0.08);
+  padding:40px 30px;
+  border-radius:18px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.4);
+  max-width:380px;
+  width:90%;
+  animation:fadeIn 1.2s ease;
+}
 
-    .tagline {
-      font-size: 14px;
-      margin: 10px 0 30px;
-      opacity: 0.9;
-    }
+.logo{
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:1px;
+  margin-bottom:8px;
+}
 
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 14px;
-      margin: 12px 0;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 30px;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
+.tagline{
+  font-size:14px;
+  opacity:0.85;
+  margin-bottom:30px;
+}
 
-    .btn:hover {
-      transform: scale(1.03);
-    }
+h2{
+  font-size:20px;
+  margin-bottom:25px;
+}
 
-    .marathi {
-      background: #f5c16c;
-      color: #000;
-    }
+.lang-btn{
+  width:100%;
+  padding:14px;
+  margin:12px 0;
+  font-size:16px;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:600;
+  transition:all 0.3s ease;
+}
 
-    .english {
-      background: #ffffff;
-      color: #000;
-    }
-  </style>
+.lang-btn.eng{
+  background:#ffffff;
+  color:#1e3c72;
+}
+
+.lang-btn.mar{
+  background:#f9c74f;
+  color:#000;
+}
+
+.lang-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.footer{
+  margin-top:25px;
+  font-size:12px;
+  opacity:0.7;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
 </head>
 
 <body>
 
-  <div class="box">
-    <h1>MORYA ESSENTIALS</h1>
-    <div class="tagline">Pure by Faith</div>
+<div class="container">
+  <div class="logo">Morya Essentials</div>
+  <div class="tagline">Pure by Faith</div>
 
-    <p>Select Your Language</p>
+  <h2>Select Your Language</h2>
 
-    <button class="btn marathi" onclick="setLang('mr')">मराठी</button>
-    <button class="btn english" onclick="setLang('en')">English</button>
+  <button class="lang-btn eng" onclick="setLang('en')">
+    English
+  </button>
+
+  <button class="lang-btn mar" onclick="setLang('mr')">
+    मराठी
+  </button>
+
+  <div class="footer">
+    Kolhapur • Trusted Quality
   </div>
+</div>
 
-  <script>
-    function setLang(lang) {
-      localStorage.setItem("siteLang", lang);
-      window.location.href = "index.html";
-    }
-  </script>
+<script>
+function setLang(lang){
+  localStorage.setItem("siteLang", lang);
+  window.location.href = "index.html";
+}
+</script>
 
 </body>
 </html>
